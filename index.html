@@ -5,44 +5,16 @@
 
 	<style type="text/css">
 	
-	html, body {
-		width: 100%;
+	body {
+/*		width: 100%;
 		height: 100%;
 		margin: 0;
-		padding: 0;
+		padding: 0;*/
 		/* background-color: orange; */
 		-webkit-animation: changecolour 15s linear infinite;
 		-moz-animation: changecolour 15s linear infinite;
 		animation: changecolour 15s linear infinite;
 	}
-	
-	div.horizontal {
-		display: flex;
-		justify-content: center;
-	}
-
-	div.vertical {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
-	
-	div.div {
-		width: 100%;
-		height: 100%;
-	}
-	
-	img {
-		width: 250px;
-		height: 250px;
-		-webkit-animation: spin 4s linear infinite;
-		-moz-animation: spin 4s linear infinite;
-		animation: spin 4s linear infinite;
-	}
-	
-	@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-	@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-	@keyframes spin { 100% { transform:rotate(360deg); } }
 	
 	@-webkit-keyframes changecolour {
 		0%		{ background: red; }
@@ -72,16 +44,99 @@
 		100%	{ background: red; }
 	}
 	
+	img {
+/*
+		-webkit-animation: spin 4s linear infinite;
+		-moz-animation: spin 4s linear infinite;
+		animation: spin 4s linear infinite;
+*/
+	}
+	
+	@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+	@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+	@keyframes spin { 100% { transform:rotate(360deg); } }
+	
+	container {
+		position: relative;
+	}
+	
+	#eyes-open {
+		position: absolute;
+		width: 250px;
+		height: 250px;
+		top: 50%;
+		left: 50%;
+		margin-top: -125px;
+		margin-left: -125px;
+		z-index: 2;
+		-webkit-animation: blink 4s alternate infinite step-end;
+		-moz-animation: blink 4s alternate infinite step-end;
+		animation: blink 4s alternate infinite step-end;
+	}
+	
+	#eyes-close {
+		position: absolute;
+		width: 250px;
+		height: 250px;
+		top: 50%;
+		left: 50%;
+		margin-top: -125px;
+		margin-left: -125px;
+		z-index: 1;
+	}
+	
+	@-webkit-keyframes blink {
+		0%		{ opacity: 1 }
+		20%		{ opacity: 0 }
+		25%		{ opacity: 1 }
+		30%		{ opacity: 0 }
+		35%		{ opacity: 1 }
+		50%		{ opacity: 0 }
+		55%		{ opacity: 1 }
+		80%		{ opacity: 0 }
+		85%		{ opacity: 1 }
+		90%		{ opacity: 0 }
+		95%		{ opacity: 1 }
+		100%	{ opacity: 1 }
+	}
+	@-moz-keyframes blink {
+		0%		{ opacity: 1 }
+		20%		{ opacity: 0 }
+		25%		{ opacity: 1 }
+		30%		{ opacity: 0 }
+		35%		{ opacity: 1 }
+		50%		{ opacity: 0 }
+		55%		{ opacity: 1 }
+		80%		{ opacity: 0 }
+		85%		{ opacity: 1 }
+		90%		{ opacity: 0 }
+		95%		{ opacity: 1 }
+		100%	{ opacity: 1 }
+	}
+	@keyframes blink {
+		0%		{ opacity: 1 }
+		20%		{ opacity: 0 }
+		25%		{ opacity: 1 }
+		30%		{ opacity: 0 }
+		35%		{ opacity: 1 }
+		50%		{ opacity: 0 }
+		55%		{ opacity: 1 }
+		80%		{ opacity: 0 }
+		85%		{ opacity: 1 }
+		90%		{ opacity: 0 }
+		95%		{ opacity: 1 }
+		100%	{ opacity: 1 }
+	}
+	
 	</style>
 
 </head>
 
 <body>
 
-	<div class="horizontal div">
-		<div class="vertical">
-			<img src="taropuff.png" />
-		</div>
+	<div class="container">
+		<img id="eyes-open" src="taropuff.png" />
+		<img id="eyes-close" src="taropuff-blink.png" />
 	</div>
 
 </body>
