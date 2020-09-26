@@ -44,23 +44,11 @@
 		100%	{ background: red; }
 	}
 	
-	img {
-/*
-		-webkit-animation: spin 4s linear infinite;
-		-moz-animation: spin 4s linear infinite;
-		animation: spin 4s linear infinite;
-*/
-	}
-	
-	@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-	@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-	@keyframes spin { 100% { transform:rotate(360deg); } }
-	
 	container {
 		position: relative;
 	}
 	
-	#eyes-open {
+	#taropuff-blinking {
 		position: absolute;
 		width: 250px;
 		height: 250px;
@@ -68,66 +56,7 @@
 		left: 50%;
 		margin-top: -125px;
 		margin-left: -125px;
-		z-index: 2;
-		-webkit-animation: blink 4s alternate infinite step-end;
-		-moz-animation: blink 4s alternate infinite step-end;
-		animation: blink 4s alternate infinite step-end;
 	}
-	
-	#eyes-close {
-		position: absolute;
-		width: 250px;
-		height: 250px;
-		top: 50%;
-		left: 50%;
-		margin-top: -125px;
-		margin-left: -125px;
-		z-index: 1;
-	}
-	
-	@-webkit-keyframes blink {
-		0%		{ opacity: 1 }
-		20%		{ opacity: 0 }
-		25%		{ opacity: 1 }
-		30%		{ opacity: 0 }
-		35%		{ opacity: 1 }
-		50%		{ opacity: 0 }
-		55%		{ opacity: 1 }
-		80%		{ opacity: 0 }
-		85%		{ opacity: 1 }
-		90%		{ opacity: 0 }
-		95%		{ opacity: 1 }
-		100%	{ opacity: 1 }
-	}
-	@-moz-keyframes blink {
-		0%		{ opacity: 1 }
-		20%		{ opacity: 0 }
-		25%		{ opacity: 1 }
-		30%		{ opacity: 0 }
-		35%		{ opacity: 1 }
-		50%		{ opacity: 0 }
-		55%		{ opacity: 1 }
-		80%		{ opacity: 0 }
-		85%		{ opacity: 1 }
-		90%		{ opacity: 0 }
-		95%		{ opacity: 1 }
-		100%	{ opacity: 1 }
-	}
-	@keyframes blink {
-		0%		{ opacity: 1 }
-		20%		{ opacity: 0 }
-		25%		{ opacity: 1 }
-		30%		{ opacity: 0 }
-		35%		{ opacity: 1 }
-		50%		{ opacity: 0 }
-		55%		{ opacity: 1 }
-		80%		{ opacity: 0 }
-		85%		{ opacity: 1 }
-		90%		{ opacity: 0 }
-		95%		{ opacity: 1 }
-		100%	{ opacity: 1 }
-	}
-	
 	</style>
 
 </head>
@@ -135,8 +64,7 @@
 <body>
 
 	<div class="container">
-		<img id="eyes-open" src="taropuff.png" />
-		<img id="eyes-close" src="taropuff-blink.png" />
+		<img id="taropuff-blinking" src="taropuff-blinking.gif" />
 	</div>
 
 </body>
